@@ -1,0 +1,93 @@
+.placeorder {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+.placeorder-left, .placeorder-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.placeorder-left .title {
+  font-size: 1.5rem;
+  color: tomato;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.multi-fields {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.placeorder-left input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.placeorder-left input:focus {
+  border-color: tomato;
+  outline: none;
+}
+
+.cart-total {
+  background-color: #fff7f5;
+  padding: 1.5rem;
+  border: 1px solid #ffd3cb;
+  border-radius: 12px;
+  margin-top: 100px;
+}
+
+.cart-total-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.75rem 0;
+  font-size: 1rem;
+}
+
+.cart-total-item p:first-child {
+  font-weight: 500;
+}
+
+.cart-total hr {
+  border: none;
+  height: 1px;
+  background-color: #ffd3cb;
+  margin: 1rem 0;
+}
+
+.cart-total button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: tomato;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cart-total button:hover {
+  background-color: #e94b2d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .placeorder {
+    flex-direction: column;
+  }
+}

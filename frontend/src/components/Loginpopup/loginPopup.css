@@ -1,0 +1,144 @@
+/* Overlay background */
+.login-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup container */
+.login-popup-container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  animation: fadeInScale 0.3s ease-in-out;
+}
+
+/* Title and close icon */
+.login-popup-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.login-popup-title h2 {
+  font-size: 1.5rem;
+  color: tomato;
+  text-transform: capitalize;
+}
+.login-popup-title img {
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+    align-self: flex-start;
+    cursor: pointer;
+    filter: invert(100%);
+}
+
+/* Input fields and button group */
+.login-popup-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.login-popup-inputs input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.login-popup-inputs input:focus {
+  outline: none;
+  border-color: tomato;
+}
+
+.login-popup-inputs button {
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  background: tomato;
+  color: #ffffff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.login-popup-inputs button:hover {
+  background: #e5533d;
+}
+
+/* Terms and conditions checkbox */
+.login-popup-condition {
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: #555555;
+}
+
+.login-popup-condition input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+/* Toggle link */
+.login-popup-container p {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #444444;
+}
+
+.login-popup-container span {
+  color: tomato;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Fade-in and scale animation */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .login-popup-container {
+    padding: 16px;
+    width: 95%;
+  }
+  .login-popup-title h2 {
+    font-size: 1.25rem;
+  }
+  .login-popup-inputs input,
+  .login-popup-inputs button {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+}
